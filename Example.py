@@ -7,7 +7,7 @@ import numpy as np
 """
 Author: Tanaz A. Mohayai
 Copyright (C) 2016-present by Tanaz A. Mohayai, Illinois Institute of Technology. All rights reserved.
-This example demonstrates the use of the ReDat module. The root_dummy is a dummy ROOT file and is 
+This example demonstrates the use of the ReDat module. The root_dummy is a dummy ROOT file name and is 
 used for illustrative purposes, only. 
 """
 

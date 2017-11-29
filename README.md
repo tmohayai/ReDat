@@ -16,4 +16,4 @@ source /path/to/maus/env.she
 
 Please see CITATION document on how to cite this module.
 
-The module comes with an example ROOT data file and an example script "Example.py" which illustrates how the module is used. 
+The module comes with an example script "Example.py" which illustrates how the module is used. 

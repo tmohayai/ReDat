@@ -4,11 +4,12 @@
 Author: Tanaz A. Mohayai
 Copyright (C) 2016-present by Tanaz A. Mohayai. All rights reserved.
 
-This module is tailored for use with a Muon Ionization Cooling Experiment (MICE) data file. It reads a ROOT file with 
-MICE-specific data structure and converts it to a for009 formatted file for input into ecalc9f for further analysis. 
+This module is tailored for use with a Muon Ionization Cooling Experiment (MICE) data file in the ROOT format. It reads this
+ROOT file which has a MICE-specific data structure and converts it into a for009 formatted file for input into ecalc9f for 
+further analysis. 
 
-This script, along with others serve the Muon Ionization Cooling Experiment, MICE and are part of the  author's PhD thesis 
-work on MICE [2, 3, 4, 5, 6]. There is continous progress on the analysis and modules presented here and the author remains 
+This script, along with others serve the Muon Ionization Cooling Experiment, MICE and are part of the author's PhD thesis 
+work on MICE [1, 2, 3, 4, 5]. There is continous progress on the analysis and modules presented here and the author remains 
 the sole contributor. However, suggestions for this work are encouraged. This agreement may change without notice. 
 
 The function parameters defined in this module along with their descriptions are as following: 
@@ -17,26 +18,27 @@ root_file_name: name of the input ROOT file.
 
 tof_min, tof_max: user-defined range for the time-of-flight of muons. 
 
-plane_number: MICE trackers consist of 5 scintillating fiber stations, each with 3 planes. User can define a particular 
+plane_number: MICE trackers consist of 5 scintillating fiber stations, each with 3 planes. User can specify a particular 
 tracker plane for emittance or density calculation. 
 
 usp_min, usp_max: user-defined range for the tracker reconstructed muon momenta. Together with TOF time-of-flight, they act 
 as PID cuts.  
 
-Note: the default values are relevant when an ICOOL's "for009.dat" [8] data array format is used.
+Note: only relevant columns of the for009 file are populated. MICE data does not have information regarding some of the columns 
+(polarization, weight, etc) in the for009 file. 
 
 Please note that this module, along with others which are currently in author's posession are planned to be merged into 
-the official MICE Analysis User Software, MAUS package [9].
+the official MICE Analysis User Software, MAUS package [8].
 
 [1] Scipy's "gaussian_kde()" module by R. Kern, http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.gaussian_kde.html.
-[2] T. A. Mohayai et al., "Novel Application of Non-parametric Density Estimation Technique in Muon Ionization Cooling Experiment," APS-DPF'17 Proceedings.
-[3] T. A. Mohayai, "Novel Application of Kernel Density Estimation in MICE," MICE-Note-506.
-[4] T. A. Mohayai et al., "Novel Implementation of Non-parametric Density Estimation in MICE," IPAC'17 Proceedings.
+[1] T. A. Mohayai et al., "Novel Application of Non-parametric Density Estimation Technique in Muon Ionization Cooling Experiment," APS-DPF'17 Proceedings.
+[2] T. A. Mohayai, "Novel Application of Kernel Density Estimation in MICE," MICE-Note-506.
+[3] T. A. Mohayai et al., "Novel Implementation of Non-parametric Density Estimation in MICE," IPAC'17 Proceedings.
+[4] T. A. Mohayai et al., "Simulated Measurements of Beam Cooling in Muon Ionization Cooling Experiment," NA-PAC'16 Proceedings.
 [5] T. A. Mohayai et al., "Simulated Measurements of Beam Cooling in Muon Ionization Cooling Experiment," NA-PAC'16 Proceedings.
-[6] T. A. Mohayai et al., "Simulated Measurements of Beam Cooling in Muon Ionization Cooling Experiment," NA-PAC'16 Proceedings.
-[7] T. Roberts, "G4beamline User's Guide", Muons, Inc (2013), http://www.muonsinc.com. 
-[8] http://www.cap.bnl.gov/ICOOL/fernow/readme.html
-[9] C. D. Tunnell, C. T. Rogers, "MAUS: MICE Analysis User Software", IPAC (2011).
+[6] T. Roberts, "G4beamline User's Guide", Muons, Inc (2013), http://www.muonsinc.com. 
+[7] http://www.cap.bnl.gov/ICOOL/fernow/readme.html
+[8] C. D. Tunnell, C. T. Rogers, "MAUS: MICE Analysis User Software", IPAC (2011).
 """
 
 import os
@@ -138,4 +140,3 @@ def redat(root_file_name, tof_min, tof_max, plane_number, usp_min, usp_max):
 	usfile.close()
 	dsfile.close()
 	
-#if __name__ == "__main__":

@@ -16,4 +16,4 @@ source /path/to/maus/env.she
 
 Please see CITATION document on how to cite this module.
 
-The module comes with an example script "Example.py" which illustrates how the module is used. 
+The module comes with its costum routine script "Routine.py" which not only illustrates how the module is used, but is the necessary component of producing the final product (the for009 formatted file).

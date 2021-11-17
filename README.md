@@ -4,11 +4,11 @@ Welcome to "ReDat" module.
 Author: Tanaz A. Mohayai
 
 This module is part of a series of modules owned by the author for measurements of density and volume as alternative figure of merit 
-for beam cooling in Muon Ionization Cooling Experiment, MICE and has an "in-progress" nature. Please see the descriptions in VolKDE.py for more details.
+for beam cooling in Muon Ionization Cooling Experiment, MICE. 
 
 To make this module work, you need to have MAUS (MICE Analysis User Software) installed,
 
-1 - open a terminal, and 
+1 - open a terminal 
 2 - enter the following command to set the environment variables to MAUS
 
 source /path/to/maus/env.she 

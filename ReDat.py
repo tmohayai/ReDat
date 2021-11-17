@@ -9,10 +9,7 @@ ROOT file which has a MICE-specific data structure and converts it into a for009
 further analysis. 
 
 This script, along with others serve the Muon Ionization Cooling Experiment, MICE and are part of the author's PhD thesis 
-work on MICE [1, 2, 3, 4, 5]. There is continous progress on the analysis and modules presented here and the author remains 
-the sole contributor. However, suggestions for this work are encouraged. This agreement may change without notice. 
-
-The function parameters defined in this module along with their descriptions are as following: 
+work on MICE [1, 2, 3, 4, 5]. The function parameters defined in this module along with their descriptions are as following: 
 
 root_file_name: name of the input ROOT file.
 
